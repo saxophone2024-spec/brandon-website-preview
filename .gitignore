@@ -1,0 +1,5 @@
+# raw Google Doc export of the schedule and its intermediate JSON stay local
+tools/schedule/doc.txt
+tools/schedule/records.json
+tools/schedule/__pycache__/
+shots/

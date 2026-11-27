@@ -7,6 +7,7 @@ index.html                 메인 (KR/EN, 프로필·섭외·일정·EPK·미디
 epk.html                   5쪽 EPK (A4 인쇄용, 같은 톤)
 assets/css/style.css       디자인 시스템
 assets/js/main.js          언어·내비·모바일 메뉴·리빌·EPK 탭·복사·문의 폼·일정 필터
+tools/schedule/            일정 생성기 (Google Doc → #schedule 섹션 재생성)
 assets/img/                사진·음반 커버
 assets/downloads/          EPK PDF · 프레스 사진 · 무대 도면
 deploy.sh                  GitHub Pages push
@@ -34,6 +35,21 @@ shots/                     렌더 검수 이미지
 8. **05 Media** — 블랙 섹션, 라흐마니노프 〈첼로 소나타〉(예술의전당 IBK홀) 메인 + 크레스턴 협주곡(예술의전당 콘서트홀) 서브 카드
 9. **06 Contact** — 매니지먼트 정보 + 문의 폼(메일 앱 연결)
 10. **Footer** + 모바일 하단 고정 CTA
+
+## 일정(`#schedule`) 갱신
+
+원본은 Google Doc `Schedule_Brandon Choi`(`10MQzITnWeXVGXH62cKimFwUYZVM6fPPRQWiQkBNFxu0`). Doc을 고친 뒤 아래 두 줄로 `index.html`의 `<!-- SCHEDULE -->` ~ `<!-- EPK -->` 사이를 다시 만든다(구매·연락처 등 Doc의 내부 메모는 Doc에 넣지 않는다).
+
+```bash
+gog --readonly docs cat 10MQzITnWeXVGXH62cKimFwUYZVM6fPPRQWiQkBNFxu0 --account saxophone2024@gmail.com --all-tabs \
+  | python3 -c "import sys,json;d=json.load(sys.stdin);open('tools/schedule/doc.txt','w').write(d['data']['tabs'][0]['text'])"
+python3 tools/schedule/parse.py && python3 tools/schedule/build.py
+```
+
+- `parse.py` — Doc 텍스트 → `tools/schedule/records.json`(연/월/일·구간·국문/영문·장소). 표기가 깨진 항목은 `KO_OVERRIDE`/`EN_OVERRIDE`/`VENUE_OVERRIDE`에 추가.
+- `build.py` — 다가오는 공연(오늘 이후)과 연도별 전체 일정을 만들어 `index.html`에 주입(반복 실행 안전).
+- 다가오는 공연은 `data-date`를 읽어 지난 날짜를 JS가 자동으로 빼고 `NEXT` 표시를 옮긴다 — 별도 수정 없이도 시간이 지나면 최신 상태로 보인다.
+- `doc.txt`·`records.json`은 `.gitignore`에 있어 공개 저장소에 올라가지 않는다.
 
 ## 검수
 
