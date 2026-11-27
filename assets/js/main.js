@@ -22,7 +22,7 @@
 
   /* 2. nav + active section + floating cta */
   var links = document.querySelectorAll('.nav__link');
-  var sections = ['about', 'booking', 'epk', 'media', 'contact']
+  var sections = ['about', 'booking', 'schedule', 'epk', 'media', 'contact']
     .map(function (id) { return document.getElementById(id); }).filter(Boolean);
   function onScroll() {
     var y = window.scrollY || window.pageYOffset;
@@ -176,4 +176,44 @@
   /* 9. year */
   var y = document.getElementById('year');
   if (y) y.textContent = String(new Date().getFullYear());
+
+  /* 10. schedule — drop dates that have already passed from "Upcoming" */
+  var upcoming = document.getElementById('sched-upcoming');
+  if (upcoming) {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var kept = [];
+    Array.prototype.slice.call(upcoming.querySelectorAll('.sched-row')).forEach(function (li) {
+      var iso = li.getAttribute('data-date');
+      if (!iso) { kept.push(li); return; }
+      var p = iso.split('-');
+      var dt = new Date(+p[0], +p[1] - 1, +p[2]);
+      if (dt < today) {
+        if (li.parentNode) li.parentNode.removeChild(li);
+      } else {
+        kept.push(li);
+      }
+    });
+    var flag = upcoming.querySelector('.sched-row__flag');
+    if (flag && flag.parentNode) flag.parentNode.removeChild(flag);
+    if (kept.length) {
+      var next = document.createElement('span');
+      next.className = 'sched-row__flag';
+      next.textContent = 'Next';
+      kept[0].appendChild(next);
+    }
+    var count = document.getElementById('sched-count');
+    if (count) {
+      var koLabel = count.querySelector('.ko');
+      var enLabel = count.querySelector('.en');
+      count.textContent = kept.length + ' ';
+      if (koLabel) count.appendChild(koLabel);
+      if (enLabel) count.appendChild(enLabel);
+    }
+    var emptyNote = document.getElementById('sched-empty');
+    if (!kept.length) {
+      upcoming.hidden = true;
+      if (emptyNote) emptyNote.hidden = false;
+    }
+  }
 })();

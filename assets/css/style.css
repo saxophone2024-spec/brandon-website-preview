@@ -382,6 +382,46 @@ body.menu-open { overflow: hidden; }
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: var(--d, 0ms); }
 .reveal.is-in { opacity: 1; transform: none; }
 
+/* ---------- schedule ---------- */
+.sched { margin-top: clamp(6px, 1vw, 14px); }
+.sched__head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--line-2); }
+.sched__h { font-size: clamp(1.04rem, 1.5vw, 1.16rem); font-weight: 800; letter-spacing: -0.02em; }
+.sched__count { font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.sched-list { display: grid; }
+.sched-row { display: grid; grid-template-columns: 112px minmax(0, 1fr) auto; gap: clamp(14px, 2.4vw, 28px); align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.sched-row__date { display: block; font-family: var(--display); font-size: 1.24rem; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sched-row__flag { display: inline-flex; align-items: center; gap: 5px; align-self: start; padding: 3px 8px; border: 1px solid var(--accent); border-radius: 999px; font-family: var(--sans); font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.sched-row__flag::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+.sched-row__body { display: block; min-width: 0; }
+.sched-row__title { display: block; font-size: 1.02rem; font-weight: 650; line-height: 1.45; letter-spacing: -0.02em; text-wrap: balance; }
+.sched-row__venue { display: inline-flex; align-items: center; gap: 7px; margin-top: 5px; font-size: 12px; font-weight: 600; color: var(--muted); }
+.sched-row__venue::before { content: ""; flex: none; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+.sched__empty { margin-top: 22px; font-size: 0.92rem; line-height: 1.6; color: var(--muted); max-width: 52ch; }
+.sched__empty a { font-weight: 700; color: var(--ink); border-bottom: 1px solid var(--line-2); padding-bottom: 1px; }
+.sched__empty a:hover { color: var(--accent); border-color: var(--accent); }
+
+.sched-archive { margin-top: clamp(40px, 5vw, 68px); }
+.sched-year { border-bottom: 1px solid var(--line); }
+.sched-year summary { display: grid; grid-template-columns: 104px 1fr auto; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; }
+.sched-year summary::-webkit-details-marker { display: none; }
+.sched-year summary::marker { content: ""; }
+.sched-year summary:hover .sched-year__num { color: var(--accent); }
+.sched-year__num { font-family: var(--display); font-size: clamp(1.45rem, 2.4vw, 1.95rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1; transition: color .2s; }
+.sched-year[open] .sched-year__num { color: var(--accent); }
+.sched-year__meta { font-size: 11.5px; font-weight: 600; letter-spacing: .04em; color: var(--muted); }
+.sched-year__chev { position: relative; width: 30px; height: 30px; border: 1px solid var(--line-2); border-radius: 50%; transition: background .2s, border-color .2s; }
+.sched-year__chev::before, .sched-year__chev::after { content: ""; position: absolute; left: 50%; top: 50%; background: var(--ink); transition: transform .25s var(--ease); }
+.sched-year__chev::before { width: 11px; height: 1.4px; transform: translate(-50%, -50%); }
+.sched-year__chev::after { width: 1.4px; height: 11px; transform: translate(-50%, -50%); }
+.sched-year summary:hover .sched-year__chev { border-color: var(--ink); background: var(--bg-2); }
+.sched-year[open] .sched-year__chev::after { transform: translate(-50%, -50%) scaleY(0); }
+.sched-year__body { padding: 2px 0 28px; }
+.sched-month + .sched-month { margin-top: 22px; }
+.sched-month__label { display: block; padding-bottom: 4px; font-size: 10.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.sched-year .sched-row { grid-template-columns: 104px minmax(0, 1fr) auto; padding: 11px 0; }
+.sched-year .sched-row__date { font-size: 0.96rem; font-weight: 700; color: var(--ink-2); }
+.sched-year .sched-row__title { font-size: 0.94rem; font-weight: 600; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 1080px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
@@ -457,6 +497,14 @@ body.menu-open { overflow: hidden; }
   .watch__next-title { font-size: 14.5px; }
   .watch__next-arrow { display: none; }
   .hero__sub--line { max-width: none; }
+  .sched-row { grid-template-columns: 84px minmax(0, 1fr); gap: 8px 14px; padding: 15px 0; }
+  .sched-row__flag { grid-column: 2; justify-self: start; margin-top: 8px; }
+  .sched-row__date { font-size: 1.06rem; }
+  .sched-row__title { font-size: 0.97rem; }
+  .sched-year summary { grid-template-columns: 76px 1fr auto; gap: 12px; padding: 17px 0; }
+  .sched-year .sched-row { grid-template-columns: 78px minmax(0, 1fr); }
+  .sched-year .sched-row__date { font-size: 0.9rem; }
+  .sched-year .sched-row__title { font-size: 0.9rem; }
 }
 
 @media (max-width: 380px) {

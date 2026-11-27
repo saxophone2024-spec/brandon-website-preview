@@ -3,10 +3,10 @@
 `brandonjinwoochoi.com` 전면 개편 v4. 사용자 피드백(히어로 축소·672만 뷰 제거·문구 축약·공식 프로필 반영) 반영. **순백색(#FFFFFF) + Pretendard 단일 산세리프 + 코발트(#1F3BFF) 포인트**의 아티스트·에이전시 스타일 정적 사이트.
 
 ```
-index.html                 메인 (KR/EN, 프로필·섭외·EPK·미디어·문의)
+index.html                 메인 (KR/EN, 프로필·섭외·일정·EPK·미디어·문의)
 epk.html                   5쪽 EPK (A4 인쇄용, 같은 톤)
 assets/css/style.css       디자인 시스템
-assets/js/main.js          언어·내비·모바일 메뉴·리빌·EPK 탭·복사·문의 폼
+assets/js/main.js          언어·내비·모바일 메뉴·리빌·EPK 탭·복사·문의 폼·일정 필터
 assets/img/                사진·음반 커버
 assets/downloads/          EPK PDF · 프레스 사진 · 무대 도면
 deploy.sh                  GitHub Pages push
@@ -29,10 +29,11 @@ shots/                     렌더 검수 이미지
 3. **01 Profile** — 인물 사진 + 2문단 + 학력/수상/현직/악기 표
 4. **이미지 밴드** — 부산시립교향악단 무대 (풀블리드)
 5. **02 Booking** — 프로그램 카드 6종, 3단계 진행(블랙 패널)
-6. **03 EPK** — Biography(숏·풀 복사), Repertoire, Discography, Press, Media & Stage + PDF
-7. **04 Media** — 블랙 섹션, 라흐마니노프 〈첼로 소나타〉(예술의전당 IBK홀) 메인 + 크레스턴 협주곡(예술의전당 콘서트홀) 서브 카드
-8. **05 Contact** — 매니지먼트 정보 + 문의 폼(메일 앱 연결)
-9. **Footer** + 모바일 하단 고정 CTA
+6. **03 Schedule** (`#schedule`) — 다가오는 공연(2026-11-28 이후 11건, `data-date` 기준으로 지난 날짜는 JS가 자동 제거) + 2022–2026 연도별 아코디언 전체 일정 321건. 원본: Google Doc `Schedule_Brandon Choi`(2026-11-28 07:27 사용자 요청으로 이관, 프라이빗 공연 포함·금액/연락처 등 내부 메모는 비노출)
+7. **04 EPK** — Biography(숏·풀 복사), Repertoire, Discography, Press, Media & Stage + PDF
+8. **05 Media** — 블랙 섹션, 라흐마니노프 〈첼로 소나타〉(예술의전당 IBK홀) 메인 + 크레스턴 협주곡(예술의전당 콘서트홀) 서브 카드
+9. **06 Contact** — 매니지먼트 정보 + 문의 폼(메일 앱 연결)
+10. **Footer** + 모바일 하단 고정 CTA
 
 ## 검수
 
@@ -42,6 +43,6 @@ shots/                     렌더 검수 이미지
 
 ## 남은 확인
 
-- **연락처**: 브리프의 `010-8143-1214` 사용. 기존 기록(v1 사이트·USER.md)은 서지안 매니저 `010-8068-7678`이므로 공개 전 확인 필요.
+- **연락처**: 공식 번호 `+82 10-8068-7678`(서지안 매니저)로 통일 — 사이트 전화 링크·매니지먼트 표기(유니스 추 이사 · 서지안 매니저) 유지.
 - GitHub Pages 설정(저장소 Settings → Pages → main / root)은 Pickle GitHub 앱 권한 밖이라 사용자 1회 설정 필요.
 - 도메인(`www.brandonjinwoochoi.com`)은 Wix DNS → GitHub Pages 전환 작업 별도.
