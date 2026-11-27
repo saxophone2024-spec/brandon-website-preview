@@ -322,7 +322,7 @@ body.menu-open { overflow: hidden; }
 .watch__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .watch__next { display: flex; align-items: center; gap: 14px; margin-top: 16px; padding: 10px 12px; border: 1px solid var(--line); border-radius: calc(var(--r) - 6px); transition: border-color .25s, background .25s; }
 .watch__next:hover { border-color: var(--line-2); background: rgba(255,255,255,.05); }
-.watch__next img { flex: none; width: 128px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; filter: grayscale(1) contrast(1.05); transition: filter .45s; }
+.watch__next img { flex: none; width: 152px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; filter: grayscale(1) contrast(1.05); transition: filter .45s; }
 .watch__next:hover img { filter: grayscale(.25); }
 .watch__next-body { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .watch__next-tag { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
