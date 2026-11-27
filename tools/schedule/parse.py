@@ -24,7 +24,7 @@ def clean(s):
 
 # manual corrections where the doc has an English-only or mistyped line
 KO_OVERRIDE = {
-    (2026, 1, 5): "서울시의 밤 – 서울고등학교 개교 80주년 기념 갈라 콘서트",
+    (2026, 1, 5): "서울시민의 밤 – 서울고등학교 개교 80주년 기념 갈라 콘서트",
 }
 VENUE_OVERRIDE = {
     (2026, 12, 27): "Pyeongtaek Art Center",   # doc's English line repeated the Yongin hall by mistake
