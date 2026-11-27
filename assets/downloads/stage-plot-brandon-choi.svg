@@ -63,6 +63,6 @@
 
   <!-- footer -->
   <line x1="60" y1="736" x2="1062" y2="736" stroke="#121210" stroke-opacity=".2"/>
-  <text x="60" y="758" class="m" font-size="9" fill="#6d675a">CONTACT: admin@mosphere.org · +82 10-8143-1214 · Mosphere Co., Ltd.</text>
+  <text x="60" y="758" class="m" font-size="9" fill="#6d675a">CONTACT: admin@mosphere.org · +82 10-8068-7678 · Mosphere Co., Ltd.</text>
   <text x="1062" y="758" text-anchor="end" class="m" font-size="9" fill="#6d675a">REV. 2026-11 · PAGE 1/1</text>
 </svg>
