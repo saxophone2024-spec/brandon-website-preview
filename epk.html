@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brandon Jinwoo Choi — Press Kit 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root { --ink:#111111; --muted:#6c6c73; --line:#e6e6e9; --line-2:#d4d4d9; --accent:#1f3bff; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ececee; color: var(--ink); }
+  body { font-family: "Pretendard Variable", Pretendard, Inter, -apple-system, Helvetica, Arial, sans-serif; font-size: 9.6pt; line-height: 1.55; letter-spacing: -0.01em; }
+  .page { width: 210mm; height: 297mm; background: #fff; margin: 10mm auto; padding: 16mm 16mm 14mm; position: relative; overflow: hidden; page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+  h1 { font-size: 46pt; font-weight: 800; line-height: .95; letter-spacing: -.055em; margin: 0; }
+  h1 i { font-style: normal; color: var(--accent); }
+  h2 { font-size: 19pt; font-weight: 800; line-height: 1.1; letter-spacing: -.04em; margin: 0 0 4mm; }
+  h3 { font-size: 8pt; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 3mm; }
+  p { margin: 0 0 3mm; }
+  .lead { font-size: 11pt; line-height: 1.5; }
+  .mono { font-size: 6.8pt; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .rule { border-top: 1px solid var(--line); }
+  .foot { position: absolute; left: 16mm; right: 16mm; bottom: 9mm; display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 4mm; }
+
+  .cover { padding: 0; display: grid; grid-template-rows: 1fr auto; }
+  .cover__img { position: relative; height: 198mm; overflow: hidden; background: #f7f7f8; }
+  .cover__img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; filter: grayscale(1) contrast(1.03); }
+  .cover__top { position: absolute; top: 12mm; left: 14mm; right: 14mm; display: flex; justify-content: space-between; }
+  .cover__title { padding: 8mm 14mm 10mm; }
+  .cover__sub { display: flex; justify-content: space-between; align-items: end; margin-top: 6mm; border-top: 1px solid var(--line); padding-top: 4mm; }
+  .cover__roles { font-size: 9pt; font-weight: 500; }
+  .cover__contact { text-align: right; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
+  .bio p { font-size: 8.15pt; line-height: 1.45; margin-bottom: 2.2mm; }
+  .tag { font-size: 6.8pt; font-weight: 800; letter-spacing: .1em; color: var(--accent); text-transform: uppercase; }
+
+  table { width: 100%; border-collapse: collapse; }
+  td, th { text-align: left; vertical-align: top; padding: 2mm 0; border-bottom: 1px solid var(--line); font-size: 8.5pt; }
+  th { font-size: 6.6pt; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  td.note { font-size: 6.4pt; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); text-align: right; white-space: nowrap; }
+  .composer { width: 27%; font-weight: 700; }
+
+  .disc { display: grid; grid-template-columns: 15mm 1fr; gap: 4mm; padding: 2.4mm 0; border-bottom: 1px solid var(--line); align-items: center; }
+  .disc img { width: 15mm; height: 15mm; object-fit: cover; border-radius: 2mm; }
+  .disc b { font-weight: 700; font-size: 9.2pt; }
+  .disc span { display: block; font-size: 7.8pt; color: var(--muted); }
+
+  .quote { border-top: 1px solid var(--ink); padding-top: 3mm; margin-top: 3mm; }
+  .quote blockquote { font-size: 12.5pt; font-weight: 700; line-height: 1.35; letter-spacing: -.02em; margin: 0 0 2mm; }
+  .quote blockquote em { font-style: normal; color: var(--accent); }
+  .quote footer { font-size: 6.4pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+  .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  .photos figure { margin: 0; }
+  .photos img { width: 100%; height: 102mm; object-fit: cover; object-position: 50% 10%; border-radius: 3mm; }
+  .photos figcaption { margin-top: 2mm; font-size: 6.4pt; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .plot { border: 1px solid var(--line); border-radius: 3mm; padding: 3mm; background: #fafafa; }
+  .plot svg { width: 100%; height: auto; display: block; }
+
+  .kv { display: grid; grid-template-columns: 30mm 1fr; gap: 3mm; padding: 1.8mm 0; border-bottom: 1px solid var(--line); }
+  .kv dt { font-size: 6.4pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .kv dd { margin: 0; font-size: 8.4pt; }
+
+  @page { size: A4; margin: 0; }
+  @media print { body { background: #fff; } .page { margin: 0; } .noprint { display: none; } }
+  .noprint { position: fixed; right: 12px; bottom: 12px; background: #111; color: #fff; padding: 10px 16px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border: 0; border-radius: 999px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<!-- 1 · COVER -->
+<section class="page cover">
+  <div class="cover__img">
+    <img src="assets/img/hero-portrait.jpg" alt="Brandon Jinwoo Choi">
+    <div class="cover__top"><span class="mono">Press kit · 2026</span><span class="mono">Mosphere Co., Ltd.</span></div>
+  </div>
+  <div class="cover__title">
+    <h1>Brandon<br>Jinwoo Choi<i>.</i></h1>
+    <div class="cover__sub">
+      <div class="cover__roles">Classical saxophonist · Author · Educator<br>Seoul, Republic of Korea</div>
+      <div class="cover__contact mono">admin@mosphere.org<br>+82 10-8143-1214<br>brandonjinwoochoi.com</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · BIOGRAPHY -->
+<section class="page">
+  <div style="display:flex;justify-content:space-between;align-items:baseline" class="rule"><span class="mono" style="color:var(--accent)">01 — Biography</span><span class="mono">Brandon Jinwoo Choi</span></div>
+  <h2 style="margin-top:9mm">A saxophonist writing a new<br>language for the instrument.</h2>
+  <div class="two" style="margin-top:8mm">
+    <div class="bio">
+      <div class="tag">Short bio — 125 words</div>
+      <p style="margin-top:2mm">Brandon Choi is a classical saxophonist who has continually expanded the boundaries of his instrument. He completed the Prix de Perfectionnement at the Conservatoire National Supérieur de Musique de Lyon, then earned his Master’s and — as the youngest Korean ever to do so — a Doctor of Musical Arts at the University of Cincinnati on a full scholarship. He gave the world premiere of Susan Botti’s Saxophone Concerto with the Cincinnati Symphony Orchestra and became the first Korean classical saxophonist to give a recital at Lincoln Center. His recordings include <em>Beethoven</em> (2024) and <em>Rachmaninoff</em> (2023); his essay <em>The Person Who Continues Quietly</em> was published in 2026. He teaches at Seoul National University and is President of the Classical Saxophone Association of Korea.</p>
+      <dl style="margin:6mm 0 0;border-top:1px solid var(--line-2)">
+        <div class="kv"><dt>Based in</dt><dd>Seoul, Korea (GMT+9)</dd></div>
+        <div class="kv"><dt>Representation</dt><dd>Mosphere Co., Ltd.</dd></div>
+        <div class="kv"><dt>Languages</dt><dd>Korean, English</dd></div>
+        <div class="kv"><dt>Availability</dt><dd>Worldwide</dd></div>
+      </dl>
+    </div>
+    <div class="bio">
+      <div class="tag">Full bio — 330 words</div>
+      <p style="margin-top:2mm">Brandon Choi is a classical saxophonist who has continually expanded the boundaries of his instrument — reimagining the canon through the voice of the saxophone, while bridging the distance between the concert stage and the wider public. He completed the Prix de Perfectionnement at the Conservatoire National Supérieur de Musique de Lyon, before earning his Master’s degree and, as the youngest Korean ever to do so, a Doctor of Musical Arts degree at the University of Cincinnati College-Conservatory of Music as a full scholarship recipient.</p>
+      <p>His artistic voice emerged early through competition success, taking first prize at both the Cincinnati Competition and the Korea Music Association Competition, and second prize at the MTNA National Competition. A defining moment came with the world premiere of the Saxophone Concerto by Susan Botti — Guggenheim Fellow and professor at the Manhattan School of Music — with the Cincinnati Symphony Orchestra. He has since become the first Korean classical saxophonist to give a recital at Lincoln Center in New York, with further appearances at the Blagoje Bersa Hall in Croatia, the Debussy Concert Hall in Lyon, Tower Records in Japan and the National Theater of Taiwan.</p>
+      <p>In Korea, he has appeared as soloist with the KBS Symphony Orchestra, the National Symphony Orchestra of Korea and leading Korean philharmonics.</p>
+      <p>His 2024 album <em>Beethoven</em> was praised as “a journey across the sea of breath”; <em>Rachmaninoff</em> (2023), with pianist Ilya Rashkovskiy, reimagined Rachmaninoff through the saxophone’s lyrical language. Further albums include <em>Saxophone Sonatas</em>, <em>Through Adam’s Fall</em>, <em>Dreaming</em> and <em>Winter Serenade</em>.</p>
+      <p>His concert tour with soprano Sumi Jo brought a singular dialogue between voice and saxophone to the stage, and his recital with conductor Han-Na Chang at the Daejeon Grand Festival left a lasting impression. Through EBS <em>Space Empathy</em>, SBS, KBS, MBC, YTN and his own YouTube channel, he continues to share the classical saxophone with broader audiences.</p>
+      <p>He teaches at the College of Music, Seoul National University, and serves as President of the Classical Saxophone Association of Korea. He is the founder, Music Director and Conductor of the Brandon Saxophone Orchestra. In May 2026 he released his first essay collection, <em>The Person Who Continues Quietly</em>.</p>
+    </div>
+  </div>
+  <div class="foot"><span class="mono">Biography — last updated November 2026</span><span class="mono">02 / 05</span></div>
+</section>
+
+<!-- 3 · REPERTOIRE -->
+<section class="page">
+  <div style="display:flex;justify-content:space-between;align-items:baseline" class="rule"><span class="mono" style="color:var(--accent)">02 — Repertoire</span><span class="mono">Concertos · recitals · premieres</span></div>
+  <h3 style="margin-top:9mm">Concertos with orchestra</h3>
+  <table>
+    <tr><td class="composer">Ibert</td><td>Concertino da Camera</td><td class="note">Busan Phil., 2026</td></tr>
+    <tr><td class="composer">Glazunov</td><td>Concerto in E-flat major, Op. 109</td><td class="note">Yeosu, 2022</td></tr>
+    <tr><td class="composer">Creston</td><td>Concerto, Op. 26</td><td class="note">Korean premiere</td></tr>
+    <tr><td class="composer">Debussy</td><td>Rapsodie for Orchestra and Saxophone</td><td class="note">Korean premiere</td></tr>
+    <tr><td class="composer">Dahl</td><td>Concerto for Alto Saxophone and Orchestra</td><td class="note">—</td></tr>
+    <tr><td class="composer">Molinelli</td><td>Concerto</td><td class="note">—</td></tr>
+    <tr><td class="composer">Botti</td><td>Concerto for Saxophone and Orchestra</td><td class="note">World premiere</td></tr>
+  </table>
+  <h3 style="margin-top:7mm">Recital programmes</h3>
+  <table>
+    <tr><td class="composer">Salon de Saxophone</td><td>French programme — Milhaud, Ibert, Debussy and Fauré in transcription</td><td class="note">60–75 min · piano</td></tr>
+    <tr><td class="composer">Beethoven / Rachmaninoff</td><td>The classics re-written for saxophone and piano</td><td class="note">60–75 min · piano</td></tr>
+    <tr><td class="composer">Breath</td><td>A listening programme of minimal and meditative music</td><td class="note">50–60 min · solo / piano</td></tr>
+  </table>
+  <h3 style="margin-top:7mm">Premieres &amp; commissions</h3>
+  <table>
+    <tr><td class="composer">Susan Botti</td><td>Concerto for Saxophone and Orchestra</td><td class="note">World premiere · Cincinnati Symphony</td></tr>
+    <tr><td class="composer">Paul Creston</td><td>Concerto, Op. 26</td><td class="note">Korean premiere · 2023</td></tr>
+    <tr><td class="composer">Claude Debussy</td><td>Rapsodie</td><td class="note">Korean premiere · 2026</td></tr>
+  </table>
+  <h3 style="margin-top:7mm">Selected appearances</h3>
+  <table>
+    <tr><td class="composer">Lincoln Center</td><td>New York — recital, first Korean classical saxophonist</td><td class="note">USA</td></tr>
+    <tr><td class="composer">Seoul Arts Center · Lotte Concert Hall</td><td>Recitals, concerto and gala appearances</td><td class="note">Korea</td></tr>
+    <tr><td class="composer">KBS Symphony · National Symphony</td><td>Concerto engagements</td><td class="note">Korea</td></tr>
+    <tr><td class="composer">Cincinnati Symphony</td><td>World premiere — Susan Botti concerto</td><td class="note">USA</td></tr>
+  </table>
+  <div class="foot"><span class="mono">Repertoire is representative — full list on request</span><span class="mono">03 / 05</span></div>
+</section>
+
+<!-- 4 · DISCOGRAPHY / PRESS -->
+<section class="page">
+  <div style="display:flex;justify-content:space-between;align-items:baseline" class="rule"><span class="mono" style="color:var(--accent)">03 — Discography &amp; press</span><span class="mono">Seven albums · one book</span></div>
+  <div class="two" style="margin-top:9mm">
+    <div>
+      <h3>Discography</h3>
+      <div class="disc"><img src="assets/img/beethoven.jpg" alt=""><div><b>Beethoven</b><span>2024 · with Ilya Rashkovskiy · 9 tracks</span></div></div>
+      <div class="disc"><img src="assets/img/rachmaninoff.jpg" alt=""><div><b>Rachmaninoff</b><span>2023 · with Ilya Rashkovskiy · 9 tracks</span></div></div>
+      <div class="disc"><img src="assets/img/winter_serenade.jpg" alt=""><div><b>Winter Serenade</b><span>2025 · Brandon Quartet · 6 tracks</span></div></div>
+      <div class="disc"><img src="assets/img/saxophone_sonatas.jpg" alt=""><div><b>Saxophone Sonatas</b><span>with Hyun Ji Oh · Oikos Records</span></div></div>
+      <div class="disc"><img src="assets/img/the_saxophonist.jpg" alt=""><div><b>The Saxophonist</b><span>2021 · EP · 6 tracks</span></div></div>
+      <div class="disc"><img src="assets/img/dreaming.jpg" alt=""><div><b>Dreaming</b><span>2020 · with Jae-won Kim · 3 tracks</span></div></div>
+      <p class="mono" style="margin-top:4mm">Also: Canon Fantasy · Through Adam’s Fall · Seagull · The Saxophone Song</p>
+      <h3 style="margin-top:7mm">Book</h3>
+      <p><b>The Person Who Continues Quietly</b><br><span style="white-space:nowrap">조용히 계속하는 사람</span><br>Feelm, 2026 · 352 pp. · ISBN 9791124468173</p>
+    </div>
+    <div>
+      <h3>Press</h3>
+      <div class="quote"><blockquote>“<em>A grand yet warm sound</em> — the pull of the classical saxophone.”</blockquote><footer>Yonhap News · November 2022</footer></div>
+      <div class="quote"><blockquote>“<em>Sailing through a sea of breath.</em>”</blockquote><footer>On <em>Beethoven</em> · 2024</footer></div>
+      <div class="quote"><blockquote>“Dressing art in music — a cross-disciplinary performance at the Gwangju Museum of Art.”</blockquote><footer>Newsis · November 2026</footer></div>
+      <div class="quote"><blockquote>“Brandon Choi on the power of rest.”</blockquote><footer>Singles · July 2026</footer></div>
+      <h3 style="margin-top:7mm">Broadcast</h3>
+      <p>KBS 1TV <em>Secrets of Health</em> · EBS <em>Space Gonggam</em> · SBS, KBS, MBC, YTN · YouTube — Brandon Choi’s Connection (51K subscribers, one short at 6.7M views).</p>
+    </div>
+  </div>
+  <h3 style="margin-top:10mm">Listen &amp; watch</h3>
+  <table>
+    <tr><td class="composer">Ibert — Concertino da Camera</td><td>Live with the Busan Philharmonic, 2026 — 6.7M views on YouTube</td><td class="note">YouTube</td></tr>
+    <tr><td class="composer">Brandon Choi’s Connection</td><td>Artist channel — performances, masterclasses, releases (51K)</td><td class="note">YouTube</td></tr>
+    <tr><td class="composer">Albums</td><td>Beethoven, Rachmaninoff, Winter Serenade, Saxophone Sonatas and more</td><td class="note">Apple Music · Spotify</td></tr>
+    <tr><td class="composer">Instagram</td><td>@brandonjinwoochoi — 15.6K followers</td><td class="note">Instagram</td></tr>
+  </table>
+  <div class="foot"><span class="mono">Streaming: Apple Music / Spotify / YouTube Music</span><span class="mono">04 / 05</span></div>
+</section>
+
+<!-- 5 · PHOTOS / STAGE -->
+<section class="page">
+  <div style="display:flex;justify-content:space-between;align-items:baseline" class="rule"><span class="mono" style="color:var(--accent)">04 — Photographs &amp; stage</span><span class="mono">Hi-res files on request</span></div>
+  <div class="photos" style="margin-top:9mm">
+    <figure><img src="assets/img/hero-portrait.jpg" alt="Press portrait, black and white"><figcaption>Portrait 01 — black &amp; white · © YEONINSA</figcaption></figure>
+    <figure><img src="assets/img/about-portrait.jpg" alt="Press portrait, colour"><figcaption>Portrait 02 — colour · © Keunho Jung</figcaption></figure>
+  </div>
+  <div class="two" style="margin-top:9mm">
+    <div>
+      <h3>Stage &amp; technical</h3>
+      <dl style="margin:0">
+        <div class="kv"><dt>Format</dt><dd>Solo recital with piano · concerto · duo / chamber · saxophone orchestra</dd></div>
+        <div class="kv"><dt>Set length</dt><dd>45–75 min recital · 20–35 min concerto</dd></div>
+        <div class="kv"><dt>Instruments</dt><dd>Alto and soprano saxophone (Yamaha), carried by the artist</dd></div>
+        <div class="kv"><dt>Piano</dt><dd>Grand piano, tuned to A = 442 Hz, by the presenter</dd></div>
+        <div class="kv"><dt>Sound</dt><dd>One clip or stand microphone, one monitor</dd></div>
+        <div class="kv"><dt>Travel</dt><dd>Based in Seoul (GMT+9) · US, Japan, China, Taiwan, UAE, Europe</dd></div>
+      </dl>
+    </div>
+    <div class="plot">
+      <svg viewBox="0 0 640 300" role="img" aria-label="Stage plot">
+        <rect x="20" y="70" width="600" height="180" fill="none" stroke="#111" stroke-opacity=".25" stroke-width="1"/>
+        <text x="20" y="58" font-family="monospace" font-size="10" letter-spacing="2" fill="#6c6c73">STAGE — SOLO RECITAL / CONCERTO</text>
+        <rect x="60" y="110" width="150" height="80" fill="none" stroke="#111" stroke-opacity=".4" stroke-width="1"/>
+        <text x="135" y="145" text-anchor="middle" font-family="monospace" font-size="10" fill="#111">GRAND PIANO</text>
+        <text x="135" y="162" text-anchor="middle" font-family="monospace" font-size="9" fill="#6c6c73">A=442</text>
+        <circle cx="330" cy="150" r="20" fill="none" stroke="#1f3bff" stroke-width="1.3"/>
+        <text x="330" y="154" text-anchor="middle" font-family="monospace" font-size="9" fill="#1f3bff">SAX</text>
+        <rect x="290" y="196" width="80" height="6" fill="#111" fill-opacity=".18"/>
+        <text x="330" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#6c6c73">MIC</text>
+        <rect x="470" y="100" width="90" height="46" fill="none" stroke="#111" stroke-opacity=".4" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="515" y="120" text-anchor="middle" font-family="monospace" font-size="9" fill="#6c6c73">MONITOR</text>
+        <text x="515" y="136" text-anchor="middle" font-family="monospace" font-size="9" fill="#6c6c73">1 × wedge</text>
+        <text x="20" y="276" font-family="monospace" font-size="9" fill="#6c6c73">DOWNSTAGE / AUDIENCE ↓</text>
+      </svg>
+    </div>
+  </div>
+  <div style="margin-top:9mm">
+    <h3>Booking</h3>
+    <p class="lead">Mosphere Co., Ltd. · Jian Seo, General Manager<br><span class="mono">admin@mosphere.org · +82 10-8143-1214 · brandonjinwoochoi.com</span></p>
+    <p class="mono" style="margin-top:5mm">Please credit the photographers. Higher-resolution files, additional angles and the full technical rider are available on request.</p>
+  </div>
+  <div class="foot"><span class="mono">© 2026 Brandon Jinwoo Choi. All rights reserved.</span><span class="mono">05 / 05</span></div>
+</section>
+
+<button class="noprint" onclick="window.print()">Print / Save as PDF</button>
+</body>
+</html>

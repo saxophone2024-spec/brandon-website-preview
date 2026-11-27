@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1122" height="793" viewBox="0 0 1122 793">
+  <defs>
+    <style>
+      .t { font-family: "Helvetica Neue", Arial, sans-serif; }
+      .m { font-family: "SFMono-Regular", Menlo, monospace; }
+    </style>
+  </defs>
+  <rect width="1122" height="793" fill="#ffffff"/>
+
+  <!-- header -->
+  <text x="60" y="72" class="t" font-size="13" letter-spacing="4" fill="#6d675a">STAGE PLOT — BRANDON JINWOO CHOI</text>
+  <text x="60" y="100" class="t" font-size="22" fill="#121210">Solo recital &amp; concerto · piano + saxophone</text>
+  <line x1="60" y1="120" x2="1062" y2="120" stroke="#121210" stroke-width="1"/>
+
+  <!-- stage -->
+  <rect x="60" y="170" width="1002" height="470" fill="none" stroke="#121210" stroke-width="1.4"/>
+  <text x="60" y="160" class="m" font-size="10" letter-spacing="1.5" fill="#6d675a">STAGE (MIN. 6 × 4 M)</text>
+
+  <!-- back wall -->
+  <line x1="60" y1="210" x2="1062" y2="210" stroke="#121210" stroke-opacity=".25" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="1062" y="203" text-anchor="end" class="m" font-size="9" fill="#6d675a">BACK WALL / ACOUSTIC SHELL</text>
+
+  <!-- piano -->
+  <rect x="120" y="270" width="290" height="170" fill="none" stroke="#121210" stroke-width="1.2"/>
+  <text x="265" y="345" text-anchor="middle" class="m" font-size="12" fill="#121210">GRAND PIANO</text>
+  <text x="265" y="366" text-anchor="middle" class="m" font-size="10" fill="#6d675a">TUNED A = 442 Hz</text>
+  <text x="265" y="386" text-anchor="middle" class="m" font-size="10" fill="#6d675a">LID OPEN / HALF STICK</text>
+  <!-- piano bench -->
+  <rect x="215" y="450" width="100" height="26" fill="none" stroke="#121210" stroke-opacity=".5" stroke-width="1"/>
+  <text x="265" y="494" text-anchor="middle" class="m" font-size="9" fill="#6d675a">PIANIST</text>
+
+  <!-- sax -->
+  <circle cx="610" cy="340" r="42" fill="none" stroke="#bf431f" stroke-width="1.6"/>
+  <circle cx="610" cy="340" r="3" fill="#bf431f"/>
+  <text x="610" y="336" text-anchor="middle" class="m" font-size="11" fill="#bf431f">SAX</text>
+  <text x="610" y="352" text-anchor="middle" class="m" font-size="9" fill="#bf431f">STANDING</text>
+  <!-- music stand -->
+  <rect x="700" y="300" width="60" height="8" fill="#121210" fill-opacity=".25"/>
+  <text x="730" y="292" text-anchor="middle" class="m" font-size="9" fill="#6d675a">STAND</text>
+
+  <!-- mic -->
+  <rect x="570" y="410" width="80" height="8" fill="#121210" fill-opacity=".25"/>
+  <line x1="610" y1="418" x2="610" y2="440" stroke="#121210" stroke-opacity=".4" stroke-width="1"/>
+  <text x="610" y="462" text-anchor="middle" class="m" font-size="9" fill="#6d675a">MIC — CLIP OR STAND</text>
+
+  <!-- monitor -->
+  <rect x="860" y="270" width="120" height="58" fill="none" stroke="#121210" stroke-opacity=".55" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="920" y="296" text-anchor="middle" class="m" font-size="9" fill="#6d675a">MONITOR</text>
+  <text x="920" y="312" text-anchor="middle" class="m" font-size="9" fill="#6d675a">1 × WEDGE</text>
+
+  <!-- power -->
+  <rect x="860" y="560" width="120" height="46" fill="none" stroke="#121210" stroke-opacity=".55" stroke-width="1"/>
+  <text x="920" y="580" text-anchor="middle" class="m" font-size="9" fill="#6d675a">POWER × 2</text>
+  <text x="920" y="596" text-anchor="middle" class="m" font-size="9" fill="#6d675a">220 V / 50–60 Hz</text>
+
+  <!-- entrance -->
+  <path d="M 60 640 L 60 700 L 150 700" fill="none" stroke="#121210" stroke-opacity=".4" stroke-width="1"/>
+  <text x="66" y="722" class="m" font-size="9" fill="#6d675a">ARTIST ENTRANCE</text>
+
+  <!-- downstage -->
+  <line x1="60" y1="660" x2="1062" y2="660" stroke="#121210" stroke-opacity=".2" stroke-width="1" stroke-dasharray="2 5"/>
+  <text x="1062" y="682" text-anchor="end" class="m" font-size="10" fill="#6d675a">DOWNSTAGE ↓ AUDIENCE</text>
+
+  <!-- footer -->
+  <line x1="60" y1="736" x2="1062" y2="736" stroke="#121210" stroke-opacity=".2"/>
+  <text x="60" y="758" class="m" font-size="9" fill="#6d675a">CONTACT: admin@mosphere.org · +82 10-8143-1214 · Mosphere Co., Ltd.</text>
+  <text x="1062" y="758" text-anchor="end" class="m" font-size="9" fill="#6d675a">REV. 2026-11 · PAGE 1/1</text>
+</svg>
