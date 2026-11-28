@@ -36,6 +36,12 @@ html[lang="ja"] .hero__sub--line { max-width: 32em; line-height: 1.65; letter-sp
 /* section headers: the title needs the wider column in Japanese */
 html[lang="ja"] .head { grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr); }
 
+/* break Japanese lines at phrase boundaries where the browser supports it,
+   so words like クレストン or サクソフォニスト are not split */
+html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3,
+html[lang="ja"] .card__desc, html[lang="ja"] .sched-row__title,
+html[lang="ja"] .watch__label, html[lang="ja"] .watch__next-title { word-break: auto-phrase; }
+
 html[lang="ja"] .label { letter-spacing: .1em; }
 html[lang="ja"] .label b { font-weight: 700; }
 
@@ -94,7 +100,9 @@ html[lang="ja"] .sched__empty { line-height: 1.85; }
 @media (max-width: 900px) {
   html[lang="ja"] .head { grid-template-columns: 1fr; }
   html[lang="ja"] .h1 { font-size: clamp(1.9rem, 7.6vw, 2.9rem); line-height: 1.24; }
-  html[lang="ja"] .h2 { font-size: clamp(1.5rem, 5.6vw, 2.15rem); }
+  html[lang="ja"] .h2 { font-size: clamp(1.28rem, 5.1vw, 2.1rem); }
+  html[lang="ja"] .facts div { grid-template-columns: 1fr; gap: 2px; padding: 11px 0; }
+  html[lang="ja"] .facts dt { padding-top: 0; }
   html[lang="ja"] .hero__sub--line { max-width: none; }
 }
 @media (max-width: 640px) {
