@@ -65,7 +65,7 @@ html[lang="ja"] .step h3 { letter-spacing: 0; }
 html[lang="ja"] .step p { line-height: 1.75; }
 
 html[lang="ja"] .sched-row__title { line-height: 1.55; font-weight: 600; }
-html[lang="ja"] .sched-row__flag { letter-spacing: .08em; }
+html[lang="ja"] .sched-row__flag { font-size: 10px; line-height: 1.25; padding: 4px 9px; letter-spacing: .06em; }
 
 html[lang="ja"] .bio-text { line-height: 1.85; letter-spacing: 0; }
 html[lang="ja"] .bio-text p + p { margin-top: 12px; }
