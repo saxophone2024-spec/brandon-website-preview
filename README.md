@@ -4,9 +4,12 @@
 
 ```
 index.html                 메인 (KR/EN, 프로필·섭외·일정·EPK·미디어·문의)
+jp/index.html              일본어판 (/jp/) — 같은 디자인, 일본어 단일 언어
 epk.html                   5쪽 EPK (A4 인쇄용, 같은 톤)
 assets/css/style.css       디자인 시스템
+assets/css/jp.css          일본어 조판 보정 (Noto Sans JP·행간·자간·내비 접힘)
 assets/js/main.js          언어·내비·모바일 메뉴·리빌·EPK 탭·복사·문의 폼·일정 필터
+assets/js/jp.js            일본어판 상호작용 (언어 전환 없이 같은 기능)
 tools/schedule/            일정 생성기 (Google Doc → #schedule 섹션 재생성)
 assets/img/                사진·음반 커버
 assets/downloads/          EPK PDF · 프레스 사진 · 무대 도면
@@ -50,6 +53,13 @@ python3 tools/schedule/parse.py && python3 tools/schedule/build.py
 - `build.py` — 다가오는 공연(오늘 이후)과 연도별 전체 일정을 만들어 `index.html`에 주입(반복 실행 안전).
 - 다가오는 공연은 `data-date`를 읽어 지난 날짜를 JS가 자동으로 빼고 `NEXT` 표시를 옮긴다 — 별도 수정 없이도 시간이 지나면 최신 상태로 보인다.
 - `doc.txt`·`records.json`은 `.gitignore`에 있어 공개 저장소에 올라가지 않는다.
+
+## 일본어판 (/jp/)
+
+- `jp/index.html` — 일본어 단일 언어 페이지. 메인과 같은 `assets/css/style.css`에 `assets/css/jp.css`(Noto Sans JP·행간·자간 보정, 1140px 이하에서 내비를 메뉴로 접음)를 더해 조판한다. 이미지·PDF는 `../assets/` 상대 경로를 쓴다.
+- 언어 전환 — 메인 `index.html`의 `KR / EN / JP` 중 `JP`는 `/jp/`로 이동하고, 일본어 페이지의 `KR / EN`은 각각 `/`, `/?lang=en`으로 돌아온다. 세 페이지 모두 `<link rel="alternate" hreflang>`(ko·en·ja·x-default)을 갖는다.
+- 일정 — 다가오는 공연만 일본어로 옮겼고, 2022–2026 전체 기록은 메인의 `#schedule`로 연결한다. 일정 원본이 바뀌면 `jp/index.html`의 `#sched-upcoming`도 함께 고친다.
+- 이력 표기 — 리옹은 항상 `リヨン地方音楽院（コンセルヴァトワール・ド・リヨン）`, `ジャン＝ドニ・ミシャ師事`. `CNSMD`는 쓰지 않는다.
 
 ## 검수
 
